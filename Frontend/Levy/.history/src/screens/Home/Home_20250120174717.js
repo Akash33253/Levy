@@ -1,0 +1,50 @@
+import React, { useContext } from 'react'
+import { Image, Pressable, ScrollView, Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import TopHeader from '../../components/TopHeader'
+import { styled } from 'nativewind';
+import { LinearGradient } from 'expo-linear-gradient';
+import LevyContext from '../../context/LevyContext';
+
+export default function Home({ navigation }) {
+  const context = useContext(LevyContext);
+  const { user } = context;
+  return (
+    <SafeAreaView className="flex-1 bg-light-100">
+      <LinearGradient
+        colors={['#FFF6E5', '#FFFFFF']}
+        className="rounded-b-[40px]"
+      >
+        <View className="w-full p-[20px] relative items-center justify-center flex flex-col rounded-b-[40px]">
+          <View className=" w-full flex flex-row items-center">
+            <Text className="text-dark-50 font-medium text-[24px] ">Hi, {user?.name}</Text>
+            <Pressable className="ml-auto flex flex-row items-center pl-[10px] pr-[16px] py-[8px] rounded-[40px] border-[1px] border-light-60 gap-[3px]">
+              <Image
+                className="w-[24px] h-[24px] mt-[4px]"
+                source={require("../../../assets/images/arrowDown.png")}
+              />
+              <Text className="text-dark-50 font-medium text-[14px]">October</Text>
+            </Pressable>
+          </View>
+          <View className="flex flex-col w-full items-center justify-center mt-[20px] gap-[9px]">
+            <Text className="text-light-20 text-[14px] font-medium">Total Expense</Text>
+            <Text className="text-dark-75 font-semibold text-[40px]">&#8377; 1000</Text>
+          </View>
+          <Pressable className="mt-[30px] py-[16px] px-[24px] flex flex-row items-center justify-center gap-[8px] bg-red-100 rounded-[28px]">
+            <Image
+              className="w-[48px] h-[48px]"
+              source={require("../../../assets/images/expenseIcon.png")}
+            />
+            <View className="flex flex-col gap-[3px]">
+                <Text className="text-light-80 text-[14px] font-medium">Add Expense</Text>
+                <Text className="text-light-80 text-[22px] font-semibold">&#8377; 000</Text>
+            </View>
+          </Pressable>
+        </View>
+      </LinearGradient>
+      <ScrollView>
+        <Text>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, tempora neque error quasi repellendus aut expedita incidunt minima aliquam? Vitae culpa odio, repellendus optio provident odit similique tempore qui excepturi magni fuga quos voluptates voluptatibus, alias quas quod et deleniti! Quas, voluptate placeat. Nulla, pariatur. Sint quod distinctio similique veniam, placeat iste deleniti rerum sapiente minus cumque voluptates illum tenetur dolorum, in incidunt deserunt! Dolorum soluta facere unde, cum eaque nostrum ipsum placeat velit consectetur dignissimos voluptatum delectus assumenda dicta ducimus tempora perspiciatis minus suscipit quod, odio quis asperiores provident. Obcaecati praesentium animi doloremque repellendus officia culpa nam esse distinctio, voluptatum quibusdam exercitationem veniam tempora explicabo ipsam quaerat soluta sapiente. Ullam laborum aliquid nihil repellendus quos nesciunt illo itaque facilis incidunt quam repudiandae eligendi voluptatem debitis autem architecto iure nam, maxime harum deleniti laudantium aspernatur rerum voluptates voluptas! Vitae nemo eius dolorum necessitatibus quidem, sapiente mollitia eaque ducimus aperiam eligendi laborum. Labore numquam magnam reiciendis unde cum, ipsum illo tempore adipisci nostrum a quasi corporis dignissimos inventore modi. Ab, consequatur sed beatae commodi doloremque, dolore atque voluptatum nemo vel quis neque iste magni voluptatibus fuga quaerat maxime corrupti. Distinctio, in soluta ducimus nihil saepe, ratione autem omnis consequuntur sunt labore, totam beatae amet qui quod placeat fugit voluptatum velit? Aspernatur fugiat, odit eaque commodi harum recusandae magnam ab, nesciunt, neque quis veniam quasi totam sequi laboriosam. Molestiae, sit quasi, culpa ipsam accusantium repellat necessitatibus assumenda pariatur, sunt deleniti incidunt sed veniam minus nesciunt corporis optio eius possimus laboriosam perspiciatis recusandae doloribus nostrum suscipit molestias qui. Repudiandae voluptas odit omnis quibusdam sapiente cumque eius numquam animi eligendi nam dicta ducimus obcaecati, accusantium cupiditate debitis provident exercitationem in sit itaque facilis recusandae. Facilis officiis, temporibus nostrum, sunt excepturi, quasi ullam nemo atque nulla aliquid error libero minima rerum tempora distinctio commodi nihil laborum quibusdam repellat? Quos quod dolor architecto ea dolorum quam magnam. Soluta error iste nihil tenetur dicta animi obcaecati commodi quam, modi natus ducimus magnam ratione, accusantium, labore dignissimos velit molestias voluptatibus dolor iusto sit ab blanditiis unde? Ab minima dicta corrupti necessitatibus. Dolor ipsa animi minus cupiditate porro nisi maiores, quidem, voluptate laudantium a eius nesciunt laboriosam, adipisci ipsum? Error aut, excepturi magni culpa incidunt odio cum tempora illum voluptates repellendus asperiores molestiae deleniti reiciendis repudiandae omnis obcaecati perspiciatis nisi! Dignissimos beatae deleniti delectus voluptatibus non, sint harum illum! Quibusdam, sapiente! Cumque tenetur possimus voluptatem sequi facilis rerum nesciunt consequatur. Veritatis voluptatibus ab tenetur enim dolores obcaecati possimus reprehenderit? Tempora maiores odit, dicta illo sed ut accusamus dolore reiciendis ullam expedita quae quasi excepturi dolores, suscipit temporibus voluptatem recusandae fuga nam porro tempore at minima obcaecati exercitationem. Molestiae itaque consequatur veritatis similique velit deserunt nisi sed rerum ex libero quae culpa earum veniam fugit accusamus incidunt dicta eos, reiciendis est iusto omnis esse animi eum? Rerum omnis perferendis cum esse hic delectus, laudantium asperiores nihil beatae reprehenderit dolor voluptatum velit veniam illum voluptatibus illo animi eos alias. Facilis blanditiis minus ab officia dolorem ratione, iure quis aperiam quisquam excepturi alias, amet est nostrum mollitia reiciendis! Corrupti eius iure ratione quis quisquam fuga eaque, numquam ullam quia nesciunt officia vitae dignissimos nulla impedit, commodi veritatis? Doloremque, officiis. Nemo voluptas aliquam quidem odit, nihil ipsum laudantium odio temporibus dignissimos quae deleniti possimus saepe consequatur, repellat explicabo expedita amet tenetur! Facere, doloremque porro ratione rem delectus alias corrupti placeat commodi quis similique veritatis pariatur. Ea quaerat cupiditate, saepe magnam quam, voluptate ducimus, impedit aperiam iusto eligendi sequi maiores qui veritatis possimus? Consequuntur accusantium nemo optio impedit alias. Adipisci provident aspernatur vero hic voluptatem eum quis, repellendus doloribus natus aut cupiditate architecto blanditiis esse, neque est quidem ea, nemo distinctio at alias voluptatum? Nihil, explicabo animi perferendis magni doloremque veniam commodi numquam temporibus obcaecati reprehenderit laudantium voluptates voluptatem libero, similique quisquam velit nemo nostrum, nam odio quam maxime magnam. Perspiciatis esse atque laboriosam vero amet explicabo exercitationem magnam similique quia, soluta illo incidunt deserunt praesentium doloremque! Temporibus pariatur accusantium amet facilis, laboriosam facere error numquam ullam qui sed, veritatis repellat nobis porro ipsum rem tempore unde corrupti quidem. Eius ipsa molestiae quasi, saepe repellat commodi! Ea quod ipsa voluptatem suscipit debitis repellat totam vel, expedita cum, quia harum accusamus cupiditate architecto aliquam possimus natus hic. Natus dolores maiores ad quos excepturi numquam ullam beatae temporibus voluptatum obcaecati ab consequatur harum omnis, nobis quod facere laborum adipisci neque optio quas nesciunt asperiores. Tempora necessitatibus eum odit neque, minima impedit dolor qui aliquam illo accusamus quia modi voluptate sapiente sint? Assumenda sunt ea laudantium! Eligendi consectetur neque excepturi illo quas obcaecati, ex consequatur. Veniam sapiente esse numquam in a recusandae veritatis unde temporibus obcaecati adipisci minus corrupti laborum facilis, reiciendis quia cum voluptatem blanditiis praesentium ullam pariatur. Veniam deserunt sunt iusto odit neque placeat dolore rerum iste numquam, nisi porro odio nemo quidem, quod delectus? Aliquid excepturi minima rerum sit inventore tempora, eaque veniam natus explicabo enim necessitatibus quibusdam eveniet! Reiciendis labore a facilis, quos doloribus vero tenetur? Repellendus dolor quos labore modi laudantium odit dolorem ex, assumenda harum placeat nihil earum nobis velit aut. Ut laboriosam perspiciatis dolorum commodi fuga soluta voluptas assumenda hic rem enim, odit, ex provident expedita possimus minus nemo dolore deserunt magni deleniti quia tempora. Sint autem ab quidem, dolores tempora maiores perferendis magni fuga deserunt dicta eveniet. Nihil minus, vitae ipsam, distinctio perspiciatis dignissimos consequuntur similique voluptatibus, optio commodi deleniti. Ipsum molestiae quasi hic laboriosam asperiores quae, cumque eos obcaecati mollitia incidunt earum totam libero provident illum, enim quam! Officia et, minus harum, non nulla facere amet nihil quo fugiat impedit iure! Cum temporibus neque nesciunt distinctio, ad reprehenderit, consectetur nostrum ipsam, ratione natus molestiae. Possimus aperiam beatae at recusandae, consequuntur ducimus facilis, assumenda in non delectus deserunt accusamus voluptatibus similique placeat ipsa dolorem ea molestias amet eveniet! Sint quis nemo necessitatibus itaque voluptate pariatur nostrum, error obcaecati sed ullam accusantium dolores est dignissimos eum vero nihil odio porro, perspiciatis dolore illum maiores deleniti! Sint minima perferendis, unde numquam, quaerat odit cumque ipsam doloribus molestias itaque inventore quasi tempora?</Text>
+      </ScrollView>
+    </SafeAreaView>
+  )
+}
