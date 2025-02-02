@@ -1,9 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import Svg, {Path } from 'react-native-svg';
+import Svg, { Circle, Path } from 'react-native-svg';
 import { ScrollView, Dimensions } from 'react-native';
 import { PieChart } from 'react-native-chart-kit';
-import { Canvas, Circle } from '@shopify/react-native-skia';
 
 const RingWithSegments = () => {
     const radius = 60; // Radius of the circle
@@ -29,7 +28,7 @@ const RingWithSegments = () => {
         return `M${radius},${radius} L${startX},${startY} A${radius},${radius} 0 ${largeArcFlag} 1 ${endX},${endY} Z`;
     };
     const data = [
-        { name: 'Red', population: 40, color: '#FF5733', legendFontColor: '#7F7F7F', legendFontSize: 15 },
+        { population: 40, color: '#FF5733'},
         { name: 'Green', population: 30, color: '#33FF57', legendFontColor: '#7F7F7F', legendFontSize: 15 },
         { name: 'Blue', population: 20, color: '#3357FF', legendFontColor: '#7F7F7F', legendFontSize: 15 },
         { name: 'Yellow', population: 10, color: '#F1C40F', legendFontColor: '#7F7F7F', legendFontSize: 15 },
@@ -37,11 +36,7 @@ const RingWithSegments = () => {
 
     return (
         <View>
-
-            <Canvas style={{ flex: 1 }}>
-                <Circle cx={100} cy={100} r={50} color="red" />
-            </Canvas>
-            {/* <PieChart
+            <PieChart
                 data={data}
                 width={Dimensions.get('window').width - 50}
                 height={250}
@@ -74,7 +69,7 @@ const RingWithSegments = () => {
                         strokeWidth={strokeWidth} // Set the width of the border
                     />
                 ))}
-            </Svg> */}
+            </Svg>
         </View>
     );
 };

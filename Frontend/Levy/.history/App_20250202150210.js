@@ -1,4 +1,3 @@
-import { StatusBar } from 'react-native';
 import Main from './Main';
 import "./global.css"
 import LevyState from './src/context/LevyState';
