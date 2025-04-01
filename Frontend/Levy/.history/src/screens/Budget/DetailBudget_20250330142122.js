@@ -1,0 +1,20 @@
+import React, { useContext } from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import TopHeader from '../../components/TopHeader'
+import { View } from 'react-native'
+import LevyContext from '../../context/LevyContext'
+
+export default function DetailBudget({navigation}) {
+  const context  = useContext(LevyContext);
+  const {} = context
+  return (
+    <SafeAreaView className="flex-1 bg-light-100">
+      <TopHeader navigation={navigation} title={'Detail Budget'} theme={"light"} />
+      <View className="flex-1 my-[16px]"> 
+          <View className="flex flex-col px-[32px] items-center">
+
+          </View>
+      </View>
+    </SafeAreaView>
+  )
+}

@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Levy",
+    "slug": "Levy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/levyIcon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.akashreact.Levy"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5c7b82fe-32b7-488f-ad55-230c50ba1b3c"
+      }
+    }
+  }
+}
