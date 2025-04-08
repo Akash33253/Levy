@@ -1,3 +1,0 @@
-const colors ={
-    100 : 
-}
